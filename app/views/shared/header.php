@@ -45,10 +45,6 @@
 
 								<li class="divider-vertical"></li>
 
-								<li><a href="#" class="profile"><span class="points"><?php echo $user['points']; ?></span> points</a></li>
-								<li class="divider-vertical"></li>
-		                        <li> <?php /* class="dropdown" */ ?>
-
 			                        <a href="#" class="profile">  <?php /* class="dropdown-toggle"  data-toggle="dropdown" */ ?>
 			                        	<img class="hidden-phone" id="picture" src="https://graph.facebook.com/<?php echo $basic['username']; ?>/picture?type=square" />
 			                        	<?php echo $basic['first_name']; ?>

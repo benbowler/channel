@@ -138,12 +138,13 @@ body > svg {
 
 #login {
 	position: fixed;
-	top: 42px;
+	top: 0;
 	right: 0;
-	bottom: 42px;
+	bottom: 0;
 	left: 0;
 	text-align: center;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(256, 256, 256, 0.8);
+	color: black;
 	> div {
 		width: 50%;
 		margin: 5% auto;
@@ -230,6 +231,26 @@ body > svg {
 				font-weight: 300;
 			}
 		}
+	}
+}
+
+#create_channel {
+	display: none;
+	position: fixed;
+	top: 42px;
+	right: 0;
+	bottom: 42px;
+	left: 0;
+	text-align: center;
+
+	background-color: rgba(0, 0, 0, 0.8);
+	> div {
+		width: 75%;
+		margin: 0 auto;
+		padding-top: 2em;
+
+		height: 100%;
+		overflow: scroll;
 	}
 }
 

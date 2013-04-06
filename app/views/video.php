@@ -37,6 +37,7 @@
 						email: "<?php echo $user['email']; ?>",
 						logged_in : <?php echo ($user) ? 'true' : 'false' ; ?>,
 						subscribed : <?php echo ($user['subscribed']) ? 'true' : 'false' ; ?>,
+						newuser : <?php echo ($user['newuser'] == '' || $user['newuser'] == 'first') ? "'first'" : $user['newuser'] ; ?>,
 						opengraph : <?php echo ($user['opengraph'] == '' || $user['opengraph'] == 'first') ? "'first'" : $user['opengraph'] ; ?>,
 						emailfrequency : "<?php echo ($user['emailfrequency'] == '' || $user['emailfrequency'] == 'first') ? 'first' : $user['emailfrequency'] ; ?>"
 					};
@@ -131,6 +132,8 @@
 	<?php
 	if (isset($basic)) {
 		// Include profile view
+		include('shared/create_channel.php');
+
 		include('shared/profile.php');
 
 	} else { ?>

@@ -1,4 +1,4 @@
-
+<!--
 	<script type="text/javascript">
 
 	var _gaq = _gaq || [];
@@ -13,5 +13,6 @@
 
 	</script>
 	<script type="text/javascript" src="http://s.skimresources.com/js/48582X1207741.skimlinks.js"></script>
+-->
 	</body>
 </html>

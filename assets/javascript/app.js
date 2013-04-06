@@ -18,37 +18,14 @@ function app()
 
         $.tubeplayer.defaults.afterReady = function($player){
 
-            doPoints('return', '+20 for logging in today', 'come back again tomorrow for +20');
-
             $("#login").fadeOut();
 
-            setTimeout(updatePoints, 1000);
 
-            /*
-            alertify.confirm( 'invite your friends for +50 points', function (e) {
-                if (e) {
-                    console.log('invited users' + e);
-
-                    inviteUsers();
-                } else {
-                    console.log('invites cancelled');
-                    //after clicking Cancel
-                }
-            });
-            */
-
-            // <div class="fb-like" data-href="http://facebook.com/eatbassnow" data-send="true" data-width="450" data-show-faces="true"></div>
         };
 
-        if($.user.opengraph == 'first') {
-            openGraphOptIn();
-        } else {
-            if($.user.emailfrequency == 'first') {
-                emailOptIn();
-            }
+        if($.user.newuser == 'first') {
+            createChannel();
         }
-
-        $.alertify.log('welcome to #eatbass');
 
     }
 
@@ -131,6 +108,15 @@ function app()
         FB.ui(obj);
     });
 
+
+    /*   Channel functions
+    */
+
+    function createChannel() {
+        console.log('create first channel');
+        $('#create_channel').show();
+    }
+
     /* 
      *  Function
      *
@@ -200,8 +186,6 @@ function app()
                 //var picture = video.media$group.media$thumbnail[1].url.replace('http', 'https');
 
                 _gaq.push(['_trackPageview', '/' + video.slug]);
-
-                doPoints('play', '+1 point for watching');
 
                 setLoveState();
                 console.log(video.userlikes);
@@ -382,7 +366,6 @@ function app()
 
         // Send points
         //
-        doPoints('play', '+1 point for watching');
 
         if($.user.opengraph) {
             console.log('wait 20 seconds');
@@ -399,7 +382,6 @@ function app()
         console.log('doLoveActions triggered');
 
         // Send points
-        doPoints('love', '+10 point for loving');
 
         if($.user.opengraph) {
             $('#video_status').html('posting love to facebook.');
