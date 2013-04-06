@@ -8,9 +8,9 @@ class controller
     {
         $this->model = new model();
 
-        $this->data['site_title'] = '#eatbass'; //he($app_name);
-        $this->data['site_description'] = "bass music tv";
-        $this->data['site_about'] = "Watch the latest bass music news, reviews, interviews and listen to the latest tracks. Just login to watch, love and share videos with friends. Every month we offer up some music, merch or tickets and every play, love and share enters you to win so what are you waiting for? Login to watch now.";
+        $this->data['site_title'] = 'Channel'; //he($app_name);
+        $this->data['site_description'] = "Social Web TV";
+        $this->data['site_about'] = "Watch great web content.. add and share channels.. find new videos and watch with friends";
 
         /* Do FB */
         $this->_fb();
@@ -32,8 +32,8 @@ class controller
         $video = $this->data['video'];
         if($this->data['basic'] && !$slug) {
             // @todo: redirect if logged in... else ... show video in the backgound (Muted) with login button over
-            header("Location: http://" . $_SERVER['SERVER_NAME'] . "/" . $this->data['video']['slug']); // Redirect browser
-            die();
+            //header("Location: http://" . $_SERVER['SERVER_NAME'] . "/" . $this->data['video']['slug']); // Redirect browser
+            //die();
         }
 
         //$this->data['profile'] = $this->model->get_profile($this->data['user']->_id, $limit);

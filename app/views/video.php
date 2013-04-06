@@ -138,12 +138,11 @@
 		<section id="login">
 			<div>
 
-				<p>win <strong>music</strong>, <strong>tickets</strong> and <strong>merch</strong><br />
-					by watching the latest bass music videos</p>
+				<p>go demo..</p>
 
 				<div id="fb-login-wrapper">
 					<div id="facebook-login-btb">
-						<a href="#" class="fb-js-login">watch with <span>facebook</span></a>
+						<a href="#" class="fb-js-login">Login with <span>facebook</span></a>
 					</div>
 				</div>
 				<!--
@@ -158,10 +157,6 @@
 					}(document, 'script', 'facebook-jssdk'));</script>
 				</div>
 				-->
-
-				<a href="#" id="fb-js-login-ad" class="fb-js-login">
-					<img src="/assets/info/winning_ad_dnba2013.jpg" />
-				</a>
 
 			</div>
 		</section>
