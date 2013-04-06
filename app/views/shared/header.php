@@ -1,4 +1,4 @@
-				<div class="navbar navbar-fixed-top">
+				<?php /* <div class="navbar navbar-fixed-top">
 	              <div class="navbar-inner header">
 	                <div class="container">
 	                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -45,18 +45,11 @@
 
 								<li class="divider-vertical"></li>
 
-			                        <a href="#" class="profile">  <?php /* class="dropdown-toggle"  data-toggle="dropdown" */ ?>
+			                        <a href="#" class="profile">
 			                        	<img class="hidden-phone" id="picture" src="https://graph.facebook.com/<?php echo $basic['username']; ?>/picture?type=square" />
 			                        	<?php echo $basic['first_name']; ?>
 			                        	<i class="caret"></i>
 			                        </a>
-			                        <?php /*
-			                        <ul class="dropdown-menu">
-			                          <li><a class="profile" href="/user:<?php echo $basic['username']; ?>">achievements</a></li>
-			                          <!--<li><a href="#">badges</a></li>-->
-			                          <li class="divider"></li>
-			                          <li><a class="profile" href="/user:<?php echo $basic['username']; ?>">profile</a></li>
-			                        </ul> */ ?>
 		                        </li>
 		                    <?php } else { ?>
 		                    
@@ -65,4 +58,10 @@
 	                  </div><!-- /.nav-collapse -->
 	                </div>
 	              </div><!-- /navbar-inner -->
-	            </div>
+	            </div> */ ?>
+
+	            			        <a href="#" class="user">
+			                        	<img class="hidden-phone" id="picture" src="https://graph.facebook.com/<?php echo $basic['username']; ?>/picture?type=square" />
+			                        	<?php echo $basic['first_name']; ?>
+			                        	<i class="caret"></i>
+			                        </a>

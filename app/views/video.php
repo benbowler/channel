@@ -109,17 +109,11 @@
 		});
 	  </script>
 
-		<div id="notifications"></div>
+		<?php //include('shared/header.php'); ?>
 
-		<?php include('shared/header.php'); ?>
+		<?php //include('shared/footer.php'); ?>
 
-		<section id="player">
-			<div id="player-yt"></div>
-		</section>
-
-		<?php include('shared/footer.php'); ?>
-
-
+		<!--
 		<section id="video_info">
 			
 			<h1 class="video_title"><?php echo $video['title']['$t']; ?></h1>
@@ -128,13 +122,20 @@
 			<div class="video_description"><?php echo $video['html_description']; ?></div>
 
 		</section>
+		-->
 
 	<?php
 	if (isset($basic)) {
 		// Include profile view
 		include('shared/create_channel.php');
 
-		include('shared/profile.php');
+		?>
+		<section id="player">
+			<div id="player-yt"></div>
+		</section>
+		<?
+
+		//include('shared/profile.php');
 
 	} else { ?>
 
@@ -163,23 +164,6 @@
 
 			</div>
 		</section>
-
-		<!-- seo stuff -->
-		<section>
-			<h1>top videos</h1>
-			<?php foreach ($top_plays as $video) { ?>
-				<a href="/<?php echo $video['slug']; ?>" alt="<?php echo $video['title']['$t']; ?>"><?php echo $video['title']['$t']; ?></a><br />
-			<?php } ?>
-		</section>
-		<?php /*
-		<section>
-			<?php //var_dump($top_ikes); ?>
-		</section>
-
-		<section>
-			<?php echo $site_about; ?>
-		</section>
-		*/ ?>
 
 	<?php } ?>
 

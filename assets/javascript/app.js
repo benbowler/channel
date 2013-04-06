@@ -14,12 +14,11 @@ function app()
         // @todo: if tour == 'first'
         //runTour();
 
-        processLinks();
+        //processLinks();
 
         $.tubeplayer.defaults.afterReady = function($player){
 
             $("#login").fadeOut();
-
 
         };
 
@@ -28,35 +27,6 @@ function app()
         }
 
     }
-
-    $("#video_info").delay(5000).fadeOut();
-
-    // Prepair video
-    jQuery("#player-yt").tubeplayer({
-        width: '100%', // the width of the player
-        height: '100%', // the height of the player
-        allowFullScreen: "true", // true by default, allow user to go full screen
-        showControls: 0,
-        autoPlay: true,
-        showInfo: false,
-        protocol: 'https',
-        theme: "light",
-        color: "white",
-        modestbranding: false,
-        initialVideo: $.video.ytID, // the video that is loaded into the player
-        preferredQuality: "default", // preferred quality: default, small, medium, large, hd720
-        onPlay: onVideoPlay, // after the play method is called
-        //onPause: stopWatchVideo, // after the pause method is called
-        //onStop: function () {}, // after the player is stopped
-        //onSeek: function (time) {}, // after the video has been seeked to a defined point
-        //onMute: stopWatchVideo, // after the player is muted
-        //onUnMute: setWatchVideo, // after the player is unmuted
-        onPlayerEnded: nextVideo(), // after the video completely finishes
-        onErrorNotFound: nextVideo(), // if a video cant be found
-        onErrorNotEmbeddable: nextVideo(), // if a video isnt embeddable
-        onErrorInvalidParameter: nextVideo(), // if we've got an invalid param
-        mute: true
-    });
 
     /* 
      *  Triggers
@@ -84,48 +54,139 @@ function app()
         $("#video_info").fadeOut();
     });
 
-    $('#toggleopengraph').on('switch-change', function (e, data) {
-        var $el = $(data.el)
-            , value = data.value;
-        console.log(e, $el, value);
-
-        setOpenGraph(value);
-    });
-
-    $(".profile").click(function (e) {
-        e.preventDefault();
-
-        viewProfile();
-    });
-
-    $(".add-to-page").click(function (e) {
-        // calling the API ...
-        var obj = {
-          method: 'pagetab',
-          redirect_uri: window.location
-        };
-
-        FB.ui(obj);
-    });
 
 
-    /*   Channel functions
+    /*   chanl functions
     */
 
     function createChannel() {
         console.log('create first channel');
-        $('#create_channel').show();
+        $('#create_channel').fadeIn();
+    }
+
+    $(".tag").click(function (e) {
+        e.preventDefault();
+        var tag = '.' + $(this).data("tag");
+
+        console.log(tag);
+        $('#categorys').fadeOut();
+        $(tag).fadeIn();
+    });
+
+
+    $(".tags .next").click(function (e) {
+        e.preventDefault();
+        //var tag = '.' + $(this).data("tag");
+        var titles = new Array();
+
+        // Define playlist
+        $.playlist = new Array();
+
+        $('.tags .checkbox').each(function() {
+
+            var target = $(this);
+            if (target.find("input:checkbox").is(":checked")) {
+                getVideos(target.find("input").attr("name"));
+            }
+        });
+
+        console.log(titles);
+    });
+
+    function getVideos(search) {
+        console.log(apiCall('http://gdata.youtube.com/feeds/api/videos', { 'q' : search, 'start-index' : 1, 'max-results' : 5, 'v' : 2, 'alt': 'json' }, search, processVideos));
+    }
+
+    function processVideos(search, videos)
+    {
+        console.log(videos);
+        videos.feed.entry.forEach(function (val, index, theArray) {
+
+            val.suggestion = search;
+            var ytID = val.id.$t.split(":");
+            val.ytID = ytID[3];
+
+            $.playlist.push(val);
+
+            if($.playliststarted !== true) {
+                startPlayer();
+                $.playliststarted = true;
+            }
+
+        });
+    }
+
+    function startPlayer() {
+        console.log('start player');
+        $('#create_channel').fadeOut();
+
+        $('#player').fadeIn();
+
+        // Setup video
+
+        $.video = $.playlist[Math.floor(Math.random()*$.playlist.length)];
+
+        console.log('first play');
+        console.log($.video.ytID);
+
+        jQuery("#player-yt").tubeplayer({
+            width: '100%', // the width of the player
+            height: '100%', // the height of the player
+            allowFullScreen: "true", // true by default, allow user to go full screen
+            showControls: 0,
+            autoPlay: true,
+            showInfo: false,
+            protocol: 'https',
+            theme: "light",
+            color: "white",
+            modestbranding: false,
+            initialVideo: $.video.ytID, // the video that is loaded into the player
+            preferredQuality: "default", // preferred quality: default, small, medium, large, hd720
+            //onPlay: onVideoPlay, // after the play method is called
+            //onPause: stopWatchVideo, // after the pause method is called
+            //onStop: function () {}, // after the player is stopped
+            //onSeek: function (time) {}, // after the video has been seeked to a defined point
+            //onMute: stopWatchVideo, // after the player is muted
+            //onUnMute: setWatchVideo, // after the player is unmuted
+            onPlayerEnded: nextVideo(), // after the video completely finishes
+            //onErrorNotFound: nextVideo(), // if a video cant be found
+            //onErrorNotEmbeddable: nextVideo(), // if a video isnt embeddable
+            //onErrorInvalidParameter: nextVideo(), // if we've got an invalid param
+            mute: false
+        });
+    }
+
+    //playV
+
+    /* Helper functions */
+    function apiCall(url, data, search, callback) {
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            data: data,
+            url: url,
+            success: function (response) {
+                console.log('success');
+
+                callback(search, response);
+
+            },
+            error: function (data) {
+
+                console.log('error');
+                console.log(data);
+            }
+        });
     }
 
     /* 
      *  Function
      *
-     *  
      */
 
     function onVideoPlay() {
         // Make description links external @todo: move after video load
-        processLinks();
+        // processLinks();
     }
 
     // Actions
@@ -133,14 +194,8 @@ function app()
         console.log('loading video + next virtual page.');
         jQuery("#player-yt").tubeplayer("pause");
         // Clear fb delete option
-        $('#video_status').html('');
         // Loading spinner
         $("#player").spin("yt");
-
-        // Try email optin on the second visit or video watch
-        if($.user.emailfrequency == 'first') {
-            emailOptIn();
-        }
 
         requestData = {
             user : $.user._id
@@ -187,7 +242,7 @@ function app()
 
                 _gaq.push(['_trackPageview', '/' + video.slug]);
 
-                setLoveState();
+                
                 console.log(video.userlikes);
                 //setUserLikeState(video.userlikes);
 

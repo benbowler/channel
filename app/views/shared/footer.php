@@ -1,4 +1,4 @@
-				<div class="navbar navbar-fixed-bottom">
+<?php /*				<div class="navbar navbar-fixed-bottom">
 	              <div class="navbar-inner footer">
 	                <div class="container">
 
@@ -7,15 +7,6 @@
 		                    <span class="icon-bar"></span>
 		                    <span class="icon-bar"></span>
 		                </a>
-		                <?php /* ?>
-	                    <form class="navbar-form pull-left" action="">
-	                    	<div class="input-prepend input-append">
-		                    	<span class="add-on"><i class="icon-bubbles"></i></span>
-		                        <input type="text" class="span3" placeholder="what do you think?">
-		                        <button class="btn" type="button">share</button>
-		                    </div>
-	                    </form>
-	                    <?phpm */ ?>
 
 	                    <ul class="nav pull-left hidden-phone">
 			                	<li><a id="video_status"></a></li>
@@ -32,3 +23,4 @@
 	                </div>
 	              </div><!-- /navbar-inner -->
 	            </div>
+	            */ ?>
