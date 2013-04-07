@@ -122,12 +122,14 @@
 				<a class="previous-video">previous</a>
 				<div id="player-yt"></div>
 				<a class="next-video">next</a>
+
+				<img src="/assets/images/guide.png" />
 				<!--<p class="video-description"></p>-->
 			</div>
 		</section>
 
 		<section id="guide">
-			<img src="" />
+			<img src="/assets/images/channelguide.png" />
 		</section>
 		<?php
 
