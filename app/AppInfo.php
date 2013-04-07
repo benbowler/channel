@@ -1,8 +1,5 @@
 <?php
 
-putenv("FACEBOOK_APP_ID=158294040998384");
-putenv("FACEBOOK_SECRET=5f1f26bc4ef7ce99ecbc25fbf8d85eaa");
-
 /**
  * This class provides static methods that return pieces of data specific to
  * your app
@@ -23,14 +20,14 @@ class AppInfo {
    * @return the appID for this app
    */
   public static function appID() {
-    return getenv('PARAM1');
+    return getenv('FACEBOOK_APP_ID');
   }
 
   /**
    * @return the appSecret for this app
    */
   public static function appSecret() {
-    return getenv('PARAM2');
+    return getenv('FACEBOOK_SECRET');
   }
 
   /**

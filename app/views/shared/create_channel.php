@@ -11,14 +11,14 @@
 					$categorys[$like['category']]['count'] = $categorys[$like['category']]['count']+1;
 
 					//$tags[$like['category']]['tags'] = $like['name'];
-					array_push($categorys[$like['category']]['tags'], $like['name']);
+					array_push($categorys[$like['category']]['tags'], array('name' => $like['name'], 'category' => $like['category']));
 				} else {
 					$categorys[$like['category']]['count'] = 1;
 					$categorys[$like['category']]['name'] = $like['category'];
 					$categorys[$like['category']]['class'] = str_replace('/', '-', $like['category']);
 
 					//$tags[$like['category']]['tags'] = array(0 => $like['name']);
-					$categorys[$like['category']]['tags'] = array(0 => $like['name']);
+					$categorys[$like['category']]['tags'] = array(0 => array('name' => $like['name'], 'category' => $like['category']));
 				}
 			}
 		}
@@ -49,7 +49,7 @@
 
 		<?php foreach ($category['tags'] as $tag): ?>
 	
-			<li class="checkbox"><label><input type="checkbox" name="<?php echo $tag; ?>" /><?php echo $tag; ?></label></li>
+			<li class="checkbox"><label><input type="checkbox" name="<?php echo $tag['name']; ?>" /><?php echo $tag['name']; ?><em><?php echo $tag['category']; ?></em></label></li>
 
 		<?php endforeach; ?>
 
