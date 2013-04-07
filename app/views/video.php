@@ -128,7 +128,9 @@
 
 		?>
 		<section id="player">
+			<a class="previous">previous</a>
 			<div id="player-yt"></div>
+			<a class="next">previous</a>
 		</section>
 		<?
 
