@@ -605,7 +605,7 @@ a:visited {
   background-image: linear-gradient(to bottom left, #2c152a 0%, #151515 100%);
 }
 #player div {
-  width: 80%;
+  width: 100%;
   margin: 2em auto 0;
 }
 #player div h3 {
