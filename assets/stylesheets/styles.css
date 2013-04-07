@@ -629,9 +629,10 @@ a:visited {
   float: left;
 }
 #player div #player-yt {
-  width: 500px;
+  width: 845px;
   float: left;
   height: 30em;
+  margin: 0;
 }
 #guide {
   position: fixed;
