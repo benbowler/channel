@@ -307,10 +307,11 @@ a, a:link, a:hover, a:visited {
 	position: fixed;
 
 	top: 0;
+	right: 0;
 	bottom: 0;
+	left: 0;
 
-	width: 600px;
-	margin: 0 auto;
+	display: none;
 
 	background-color: #2C152A;
 	/* Gradient */ 
@@ -320,17 +321,17 @@ a, a:link, a:hover, a:visited {
 	background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #2C152A), color-stop(1, #151515));
 	background-image: -webkit-linear-gradient(top right, #2C152A 0%, #151515 100%);
 	background-image: linear-gradient(to bottom left, #2C152A 0%, #151515 100%);
+	div{
+		width: 80%;
+		margin: 0 auto;
 
-	display: none;
+		background-color: #000;
 
-	background-color: #000;
-	#player-loading {
-		height: 100%;
-		width: 100%
+		#player-yt {
+			height: 480px;
+			width: 360px;
+		}
 	}
-	#player-yt {
-		height: 480px;
-		width: 360px;
-	}
+
 }
 

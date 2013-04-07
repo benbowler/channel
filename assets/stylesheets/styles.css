@@ -591,9 +591,10 @@ a:visited {
 #player {
   position: fixed;
   top: 0;
+  right: 0;
   bottom: 0;
-  width: 600px;
-  margin: 0 auto;
+  left: 0;
+  display: none;
   background-color: #2C152A;
   /* Gradient */
   background-image: -ms-linear-gradient(top right, #2c152a 0%, #151515 100%);
@@ -602,14 +603,13 @@ a:visited {
   background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #2c152a), color-stop(1, #151515));
   background-image: -webkit-linear-gradient(top right, #2c152a 0%, #151515 100%);
   background-image: linear-gradient(to bottom left, #2c152a 0%, #151515 100%);
-  display: none;
+}
+#player div {
+  width: 80%;
+  margin: 0 auto;
   background-color: #000;
 }
-#player #player-loading {
-  height: 100%;
-  width: 100%;
-}
-#player #player-yt {
+#player div #player-yt {
   height: 480px;
   width: 360px;
 }

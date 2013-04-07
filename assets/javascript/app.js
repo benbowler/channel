@@ -69,11 +69,13 @@ function app()
         var tag = '.' + $(this).data("tag");
 
         console.log(tag);
-        $('#categorys').fadeOut();
-        $('.categorys-title').fadeOut();
-        $('.tags-title').fadeIn();
-        $('.next').fadeIn();
-        $(tag).fadeIn();
+        $('.categorys-title').fadeOut('500', function () {
+            $('.tags-title').fadeIn();
+        });
+        $('#categorys').fadeOut('500', function () {
+            $('.next').fadeIn();
+            $(tag).fadeIn();
+        });
     });
 
     $(".tags .checkbox").click(function (e) {
