@@ -45,17 +45,6 @@
 
 				<?php } ?>
 
-				$.video = { 
-					_id : "<?php echo $video['_id']; ?>",
-					slug : "<?php echo $video['slug']; ?>",
-					title : <?php echo json_encode($video['title']['$t']); ?>,
-			        author : "<?php echo $video['author'][0]['name']['$t']; ?>",
-		            description : <?php echo json_encode($video['media$group']['media$description']['$t']); ?>,
-		            html_description : <?php echo json_encode($video['html_description']); ?>,
-					picture : "<?php echo str_replace('http', 'https', $video['media$group']['media$thumbnail'][1]['url']); ?>",
-					ytID : "<?php echo $video['media$group']['yt$videoid']['$t']; ?>"
-				};
-
 				if (response.status === 'connected') {
 				    // the user is logged in and has authenticated your
 				    // app, and response.authResponse supplies
@@ -128,9 +117,11 @@
 
 		?>
 		<section id="player">
-			<a class="previous">previous</a>
-			<div id="player-yt"></div>
-			<a class="next">next</a>
+			<div>
+				<a class="previous">previous</a>
+				<div id="player-yt"></div>
+				<a class="next">next</a>
+			</div>
 		</section>
 		<?
 

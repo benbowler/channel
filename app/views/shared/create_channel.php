@@ -7,10 +7,10 @@
 	{
 		switch ($category) {
 			case "Website":										return "Web";	break;
-			case "Organization":								return "Product/Service"; break;
+			case "Organization":								return "Brand"; break;
 			case "Musician/band":								return "Music";	break;
-			case "Company":										return "Product/Service";	break;
-			case "Business/economy website":					return "Product/Service";	break;
+			case "Company":										return "Brand";	break;
+			case "Business/economy website":					return "Brand";	break;
 			case "Artist":										return "Arts";	break;
 			case "Music":										return "Music";	break;
 			case "Producer":									return "People";	break;
@@ -24,7 +24,7 @@
 			case "Playlist":									return "Music";	break;
 			case "Music chart":									return "Music";	break;
 			case "Musical instrument":							return "Music ";	break;
-			case "Literary editor":								return "Literature/Publishing";	break;
+			case "Literary editor":								return "Publishing";	break;
 			case "Tv network":									return "Film/TV ";	break;
 			case "City":										return "Place";	break;
 			case "Restaurant/cafe":								return "Food";	break;
@@ -34,31 +34,31 @@
 			case "Club":										return "Music";	break;
 			case "Entertainment website":						return "Web";	break;
 			case "Transport/freight":							return "Interest";	break;
-			case "Product/service":								return "Product/Service";	break;
-			case "Media/news/publishing":						return "Literature/Publishing";	break;
+			case "Product/service":								return "Brand";	break;
+			case "Media/news/publishing":						return "Publishing";	break;
 			case "Concert tour":								return "Music";	break;
 			case "Food/beverages":								return "Food";	break;
-			case "Retail and consumer merchandise":				return "Product/Service";	break;
-			case "Sports/recreation/activities":				return "Recreation/Activity";	break;
+			case "Retail and consumer merchandise":				return "Brand";	break;
+			case "Sports/recreation/activities":				return "Activity";	break;
 			case "Actor/director":								return "Film/TV";	break;
 			case "Movie":								return "Film/TV";	break;
 			case "Computers/internet website":								return "Tech";	break;
 			case "Electronics":								return "Tech";	break;
 			case "Tv show":								return "Film/TV";	break;
-			case "Consulting/business services":								return "Product/Service";	break;
+			case "Consulting/business services":								return "Brand";	break;
 			case "Radio station":								return "Radio";	break;
-			case "Attractions/things to do":								return "Recreation/Activity";	break;
+			case "Attractions/things to do":								return "Activity";	break;
 			case "Telecommunication":								return "Tech";	break;
-			case "Magazine":								return "Literature/Publishing";	break;
+			case "Magazine":								return "Publishing";	break;
 			case "Video":								return "Film/TV";	break;
-			case "Jewelry/watches":								return "Product/Service";	break;
+			case "Jewelry/watches":								return "Brand";	break;
 			case "Album":								return "Music";	break;
 			case "Profile":								return "People";	break;
 			case "Personal blog":								return "People";	break;
 			case "Comedian":						return "Humour";	break;
-			case "Local business":								return "Product/Service";	break;
+			case "Local business":								return "Brand";	break;
 			case "Society/culture website":					return "Web";	break;
-			case "Event planning/event services":								return "Recreation/Activity";	break;
+			case "Event planning/event services":								return "Activity";	break;
 			case "News/media website":	return "News";	break;
 			case "Song":								return "Music";	break;
 			case "Athlete":								return "Sport";	break;
@@ -70,8 +70,8 @@
 			case "Wine/spirits Interest ";	break;
 			case "Arts/entertainment/nightlife":	return "Interest";	break;
 			case "Concert venue":								return "Music";	break;
-			case "Government organisation ":								return "Product/Service";	break;
-			case "Non-profit organisation ":								return "Product/Service";	break;
+			case "Government organisation ":								return "Brand";	break;
+			case "Non-profit organisation ":								return "Brand";	break;
 			case "Movie theater":								return "Film/TV";	break;
 			case "Travel/leisure":	return "Travel";	break;
 			case "Entertainer":	return "Interest";	break;
@@ -85,9 +85,9 @@
 			case "Dancer":				return "Dance";	break;
 			case "Local/travel website":	return "Travel";	break;
 			case "Outdoor gear/sporting goods":	return "Travel";	break;
-			case "Book":								return "Literature/Publishing";	break;
+			case "Book":								return "Publishing";	break;
 			case "Computers/technology":								return "Tech";	break;
-			case "Cause":								return "Product/Service";	break;
+			case "Cause":								return "Brand";	break;
 			case "Field of study":								return "Education";	break;
 			case "Cars":								return "Automotive";	break;
 			case "Games/toys":								return "Entertainment";	break;
@@ -95,7 +95,7 @@
 			case "Education":								return "Education";	break;
 			case "Personal website":								return "People";	break;
 			case "Sport":								return "Sport";	break;
-			case "Non-governmental organization (ngo)":								return "Product/Service";	break;
+			case "Non-governmental organization (ngo)":								return "Brand";	break;
 			case "Movie genre":							return "TV/Film";	break;
 			default: return $category; 
 		}
