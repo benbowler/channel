@@ -118,7 +118,7 @@
 		?>
 		<section id="player">
 			<div>
-				<h3 class="video-title"></h3>
+				<h3><span class="selected-channel"></span> / <span class="current-tag"></span> / <span class="video-title"></span></h3>
 				<a class="video-previous">previous</a>
 				<div id="player-yt"></div>
 				<a class="video-next">next</a>

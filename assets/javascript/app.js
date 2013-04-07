@@ -66,6 +66,9 @@ function app()
 
     $(".tag").click(function (e) {
         e.preventDefault();
+
+        $('.selected-channel').html($(this).data("tag"));
+
         var tag = '.' + $(this).data("tag");
 
         console.log(tag);
@@ -167,6 +170,9 @@ function app()
             //onErrorInvalidParameter: nextVideo(), // if we've got an invalid param
             mute: false
         });
+
+        $('.video-title').html($.video.title.$t);
+        $('.video-description').html($.video.media$group.media$description.$t);
     }
 
     //playV
