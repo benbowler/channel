@@ -8,9 +8,9 @@ class controller
     {
         $this->model = new model();
 
-        $this->data['site_title'] = 'Chanl'; //he($app_name);
-        $this->data['site_description'] = "Seamless Viewing";
-        $this->data['site_about'] = "Watch great web content.. add and share channels.. find new videos and watch with friends";
+        $this->data['site_title'] = 'Channel'; //he($app_name);
+        $this->data['site_description'] = "#SeamlessViewing";
+        $this->data['site_about'] = "";
 
         /* Do FB */
         $this->_fb();

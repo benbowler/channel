@@ -154,7 +154,7 @@ function app()
             showInfo: false,
             protocol: 'https',
             theme: "light",
-            color: "white",
+            color: "black",
             modestbranding: true,
             initialVideo: $.video.ytID, // the video that is loaded into the player
             preferredQuality: "default", // preferred quality: default, small, medium, large, hd720
@@ -170,6 +170,8 @@ function app()
             //onErrorInvalidParameter: nextVideo(), // if we've got an invalid param
             mute: false
         });
+
+        $('.reason-selected').html($.video.suggestion);
 
         $('.video-title').html($.video.title.$t);
         $('.video-description').html($.video.media$group.media$description.$t);
@@ -211,11 +213,13 @@ function app()
 
     $(".next-video").click(function (e) {
         e.preventDefault();
+        console.log('next');
         nextVideo();
     });
 
     $(".pervious-video").click(function (e) {
         e.preventDefault();
+        console.log('previous');
         nextVideo('previous');
     });
 
@@ -229,7 +233,6 @@ function app()
         } else {
 
             $.previousVideo = $.video;
-
             $.video = $.playlist[Math.floor(Math.random()*$.playlist.length)];
 
         }
@@ -238,6 +241,8 @@ function app()
         console.log($.video.ytID);
 
         jQuery("#player-yt").tubeplayer('play', $.video.ytID);
+
+        $('.reason-selected').html($.video.suggestion);
 
         $('.video-title').html($.video.title.$t);
         $('.video-description').html($.video.media$group.media$description.$t);

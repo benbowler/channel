@@ -118,11 +118,11 @@
 		?>
 		<section id="player">
 			<div>
-				<h3><span class="selected-channel"></span> / <span class="current-tag"></span> / <span class="video-title"></span></h3>
-				<a class="video-previous">previous</a>
+				<h3><span class="selected-channel"></span> / <span class="reason-selected"></span> / <span class="video-title"></span></h3>
+				<a class="previous-video">previous</a>
 				<div id="player-yt"></div>
-				<a class="video-next">next</a>
-				<p class="video-description"></p>
+				<a class="next-video">next</a>
+				<!--<p class="video-description"></p>-->
 			</div>
 		</section>
 		<?
