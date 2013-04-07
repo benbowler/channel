@@ -123,7 +123,7 @@
 				<div id="player-yt"></div>
 				<a class="next-video">next</a>
 
-				<img src="/assets/images/guide.png" />
+				<img src="/assets/images/singleguide.png" />
 				<!--<p class="video-description"></p>-->
 			</div>
 		</section>
