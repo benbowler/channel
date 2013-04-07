@@ -609,6 +609,6 @@ a:visited {
   margin: 0 auto;
 }
 #player div #player-yt {
-  height: 480px;
-  width: 360px;
+  height: 100%;
+  width: 80%;
 }

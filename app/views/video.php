@@ -118,9 +118,11 @@
 		?>
 		<section id="player">
 			<div>
-				<a class="previous">previous</a>
+				<h3 class="video-title"></h3>
+				<a class="video-previous">previous</a>
 				<div id="player-yt"></div>
-				<a class="next">next</a>
+				<a class="video-next">next</a>
+				<p class="video-description"></p>
 			</div>
 		</section>
 		<?

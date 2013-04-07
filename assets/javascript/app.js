@@ -202,11 +202,39 @@ function app()
         // processLinks();
     }
 
+
+    $(".next-video").click(function (e) {
+        e.preventDefault();
+        nextVideo();
+    });
+
+    $(".pervious-video").click(function (e) {
+        e.preventDefault();
+        nextVideo('previous');
+    });
+
+
     // Actions
-    function nextVideo() {
+    function nextVideo(video) {
         console.log('loading video + next virtual page.');
 
-        
+        if(video == 'previous') {
+            $.video = $.previousVideo();
+        } else {
+
+            $.previousVideo = $.video;
+
+            $.video = $.playlist[Math.floor(Math.random()*$.playlist.length)];
+
+        }
+
+        console.log('play');
+        console.log($.video.ytID);
+
+        jQuery("#player-yt").tubeplayer('play', $.video.ytID);
+
+        $('.video-title').html($.video.title.$t);
+        $('.video-description').html($.video.media$group.media$description.$t);
 
     }
 

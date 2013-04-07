@@ -19,6 +19,7 @@
 		<script type="text/javascript" src="assets/icomoon/lte-ie7.js"></script>
 		<![endif]-->
 
+		<link rel="apple-touch-icon" href="/assests/images/apple-touch-icon.png" />
 		<?php foreach ($meta_tags as $property => $content) { ?>
 			<meta property="<?php echo $property; ?>" content="<?php echo $content; ?>" />
 		<?php } ?>
