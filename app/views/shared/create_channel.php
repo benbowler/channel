@@ -50,7 +50,7 @@
 
 				<?php endforeach; ?>
 
-				<a class="next" class="btn">Next</a>
+				<a class="next">Next</a>
 			</ul>
 			
 

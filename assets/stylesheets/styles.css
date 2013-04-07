@@ -1,7 +1,7 @@
 /*
   title: all-styles css
 */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700');
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,700,500');
 
 @import url('../icomoon/style.css');
 
@@ -367,10 +367,19 @@ table {
   display: none;
 }
 body {
-  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-size: 100%;
-  color: #333;
-  background-color: white;
+  color: #ffffff;
+  /* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
+
+  background-color: #2C152A;
+  /* Gradient */
+  background-image: -ms-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: -moz-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: -o-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #2c152a), color-stop(1, #151515));
+  background-image: -webkit-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: linear-gradient(to bottom left, #2c152a 0%, #151515 100%);
   margin: 0;
   padding: 0;
   z-index: 0;
@@ -386,16 +395,6 @@ h3,
 h4 {
   padding: 0;
   margin: 0;
-  font-size: 1.5em;
-  color: #333;
-  line-height: 2em;
-  font-weight: 300;
-}
-h1 strong,
-h2 strong,
-h3 strong,
-h4 strong {
-  font-weight: 600;
 }
 strong {
   font-weight: 600;
@@ -407,31 +406,8 @@ a:visited {
   color: #333;
 }
 #wrapper {
-  width: 720px;
+  width: 1024px;
   margin: 0.6em auto;
-}
-#video_info {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  bottom: 42px;
-  left: 0;
-  padding: 2% 5%;
-  text-align: left;
-  overflow: scroll;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-#video_info .video_title {
-  display: inline;
-  float: left;
-}
-#video_info .video_channel {
-  display: inline;
-  float: right;
-}
-#video_info .video_description {
-  clear: both;
-  display: block;
 }
 #login {
   position: fixed;
@@ -439,64 +415,39 @@ a:visited {
   right: 0;
   bottom: 0;
   left: 0;
+  padding: 10% 0;
   text-align: center;
-  background-color: rgba(256, 256, 256, 0.8);
-  color: black;
+  background-color: #2C152A;
+  /* Gradient */
+  background-image: -ms-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: -moz-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: -o-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #2c152a), color-stop(1, #151515));
+  background-image: -webkit-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: linear-gradient(to bottom left, #2c152a 0%, #151515 100%);
 }
-#login > div {
-  width: 50%;
-  margin: 5% auto;
-}
-#login > div h3 {
-  font-size: 2em;
-  font-weight: 600;
-}
-#login > div h3 em {
-  font-weight: 300;
-}
-#login > div #fb-login-wrapper {
-  height: 36px;
-  margin: 0 auto;
-  position: relative;
-}
-#login > div #fb-login-wrapper #facebook-login-btb {
-  position: absolute;
-  font-size: 14px;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  margin-left: -75px;
-  margin-top: -16px;
-}
-#login > div #fb-login-wrapper #facebook-login-btb span {
+#login h1 {
+  text-transform: uppercase;
+  font-size: 3.5em;
   font-weight: bold;
-}
-#login > div #fb-login-wrapper #facebook-login-btb a {
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(top, #839bc3 0%, #576fa3 100%);
-  background: -webkit-linear-gradient(top, #839bc3 0%, #576fa3 100%);
-  background: -moz-linear-gradient(top, #839bc3 0%, #576fa3 100%);
-  border: 1px solid #566383;
-  border-radius: 5px 5px 5px 5px;
-  box-shadow: 0 1px 0 #CADBFE inset, 0 3px 0 0 #2D447F, 0 4px 2px #999999;
-  color: #FFFFFF;
-  display: inline-block;
-  line-height: 30px;
-  height: 30px;
-  padding: 0 10px;
+  line-height: 2em;
   position: relative;
-  text-decoration: none;
-  top: -1px;
-  transition-property: top, box-shadow;
-  transition-duration: 0.1s, 0.1s;
-  transition-timing-function: linear, linear;
+  left: 0.3em;
 }
-#login > div #fb-login-wrapper #facebook-login-btb a:hover {
-  background-image: linear-gradient(top, #8ba1c7 0%, #6077aa 100%);
+#login h1 em {
+  font-size: 0.3em;
+  font-weight: 100;
+  color: #491645;
+  position: relative;
+  bottom: 3em;
 }
-#login > div #fb-login-wrapper #facebook-login-btb a:active {
-  box-shadow: 0 1px 0 #cadbfe inset, 0 1px 0 0 #2d447f, 0 2px 2px #999999;
-  top: 2px;
+#login a.fb-login {
+  padding: 10px;
+  background-color: #491645;
+  color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 #create_channel {
   display: none;
@@ -506,7 +457,14 @@ a:visited {
   bottom: 0;
   left: 0;
   text-align: center;
-  background-color: white;
+  background-color: #2C152A;
+  /* Gradient */
+  background-image: -ms-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: -moz-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: -o-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #2c152a), color-stop(1, #151515));
+  background-image: -webkit-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: linear-gradient(to bottom left, #2c152a 0%, #151515 100%);
 }
 #create_channel ul#categorys {
   display: block;
@@ -541,6 +499,14 @@ a:visited {
   right: 0;
   bottom: 0;
   left: 0;
+  background-color: #2C152A;
+  /* Gradient */
+  background-image: -ms-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: -moz-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: -o-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0, #2c152a), color-stop(1, #151515));
+  background-image: -webkit-linear-gradient(top right, #2c152a 0%, #151515 100%);
+  background-image: linear-gradient(to bottom left, #2c152a 0%, #151515 100%);
   display: none;
   background-color: #000;
 }
@@ -549,6 +515,6 @@ a:visited {
   width: 100%;
 }
 #player #player-yt {
-  height: 100%;
-  width: 100%;
+  height: 50%;
+  width: 50%;
 }

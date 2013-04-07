@@ -247,7 +247,7 @@ function app()
     }
 
     // Set up so we handle click on the buttons
-    $('.fb-js-login').click(function (e) {
+    $('.fb-login').click(function (e) {
         e.preventDefault();
 
         fbJsLogin();

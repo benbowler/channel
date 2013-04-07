@@ -142,13 +142,9 @@
 		<section id="login">
 			<div>
 
-				<p>go demo..</p>
+				<h1>Channel<sup>Beta</sup></h1>
 
-				<div id="fb-login-wrapper">
-					<div id="facebook-login-btb">
-						<a href="#" class="fb-js-login">Login with <span>facebook</span></a>
-					</div>
-				</div>
+				<a href="#" class="fb-login">Login with <span>facebook</span></a>
 				<!--
 				<div class="hidden-phone" id="fb-facepile-wrapper">
 					<div id="fb-root"></div>
