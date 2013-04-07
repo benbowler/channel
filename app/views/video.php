@@ -118,14 +118,18 @@
 		?>
 		<section id="player">
 			<div>
-				<h3><span class="selected-channel"></span> / <span class="reason-selected"></span> / <span class="video-title"></span></h3>
+				<h3 class="guide"><span class="selected-channel"></span> / <span class="reason-selected"></span> / <span class="video-title"></span></h3>
 				<a class="previous-video">previous</a>
 				<div id="player-yt"></div>
 				<a class="next-video">next</a>
 				<!--<p class="video-description"></p>-->
 			</div>
 		</section>
-		<?
+
+		<section id="guide">
+			<img src="" />
+		</section>
+		<?php
 
 		//include('shared/profile.php');
 

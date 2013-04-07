@@ -249,6 +249,11 @@ function app()
 
     }
 
+
+    $('.guide').click({
+        $('#guide').fadeIn();
+    });
+
     /*
     function setUserLikeState(userLikes) {
 
