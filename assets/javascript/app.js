@@ -250,7 +250,7 @@ function app()
     }
 
 
-    $('.guide').click({
+    $('.guide').click(function () {
         $('#guide').fadeIn();
     });
 
