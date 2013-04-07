@@ -1,5 +1,8 @@
 <?php
 
+putenv("FACEBOOK_APP_ID=158294040998384");
+putenv("FACEBOOK_SECRET=5f1f26bc4ef7ce99ecbc25fbf8d85eaa");
+
 /**
  * This class provides static methods that return pieces of data specific to
  * your app

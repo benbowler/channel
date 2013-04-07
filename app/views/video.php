@@ -27,9 +27,6 @@
 					description : "<?php echo $site_description; ?>",
 				};
 
-				// @todo: Check if this is needed?
-				$.alertify = alertify;
-
 				<?php if (isset($basic)) { ?>
 
 					$.user = { 
