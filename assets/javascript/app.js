@@ -76,9 +76,12 @@ function app()
         $(tag).fadeIn();
     });
 
-    $(".checkbox").click(function (e) {
-        e.preventDefault();
+    $(".tags .checkbox").click(function (e) {
+        //e.preventDefault();
+        console.log('click check');
         $(this).parent().toggleClass('selected');
+        $(this).find("input:checkbox").attr('checked', true);
+        return false;
     });
 
 
@@ -90,7 +93,7 @@ function app()
         // Define playlist
         $.playlist = new Array();
 
-        $('.tags .checkbox').each(function() {
+        $('.checkbox').each(function() {
 
             var target = $(this);
             if (target.find("input:checkbox").is(":checked")) {

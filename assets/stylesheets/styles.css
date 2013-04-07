@@ -548,13 +548,15 @@ a:visited {
 }
 #create_channel .tags li label {
   display: block;
-  padding: 20px;
+  padding: 40px 20px;
   letter-spacing: 0px;
 }
 #create_channel .tags li label span {
   width: 280px;
   display: block;
-  overflow: ellipsis;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 #create_channel .tags li label input {
   display: none;
