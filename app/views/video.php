@@ -61,7 +61,7 @@
 					    FB.login(function(response) {
 			                var url = [location.protocol, '//', location.host, '/', $.video.slug].join(''); // , location.pathname
 			                window.location = url;
-			            }, {scope: 'email,user_likes,publish_actions'});
+			            }, {scope: 'email,user_likes'});
 					}
 
 				    //console.log('I am logged in and connected '+uid);
