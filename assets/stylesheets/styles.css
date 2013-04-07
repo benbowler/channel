@@ -631,10 +631,13 @@ a:visited {
   float: left;
 }
 #player div #player-yt {
-  width: 945px;
+  width: 954px;
   float: left;
   height: 404px;
   margin: 0;
+}
+#player div > img {
+  padding-top: 2em;
 }
 #guide {
   position: fixed;
@@ -653,6 +656,5 @@ a:visited {
   background-image: linear-gradient(to bottom left, #2c152a 0%, #151515 100%);
 }
 #guide img {
-  padding-top: 2em;
   width: 1024px;
 }
