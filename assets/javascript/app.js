@@ -76,6 +76,11 @@ function app()
         $(tag).fadeIn();
     });
 
+    $(".checkbox").click(function (e) {
+        e.preventDefault();
+        $(this).parent().toggleClass('selected');
+    });
+
 
     $(".next").click(function (e) {
         e.preventDefault();

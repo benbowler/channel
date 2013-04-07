@@ -49,7 +49,7 @@
 
 		<?php foreach ($category['tags'] as $tag): ?>
 	
-			<li class="checkbox"><label><input type="checkbox" name="<?php echo $tag['name']; ?>" /><?php echo $tag['name']; ?><em><?php echo $tag['category']; ?></em></label></li>
+			<li><label class="checkbox"><input type="checkbox" name="<?php echo $tag['name']; ?>" /><span><?php echo $tag['name']; ?></span><em><?php echo $tag['category']; ?></em></label></li>
 
 		<?php endforeach; ?>
 
@@ -57,6 +57,6 @@
 	
 	<?php endforeach; ?>
 	<span class="next-wrapper">
-		<a class="next btn">Next</a>
+		<a class="next btn">Watch</a>
 	</span>
 </section>
