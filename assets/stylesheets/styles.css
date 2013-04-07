@@ -613,8 +613,8 @@ a:visited {
   background-position: top right;
   background-repeat: no-repeat;
   width: 1024px;
-  height: 80px;
-  padding: 20px 0;
+  height: 100px;
+  padding-left: 20px;
 }
 #player div .next-video {
   background-image: url('../images/next.png');
@@ -623,13 +623,13 @@ a:visited {
   float: right;
 }
 #player div .previous-video {
-  background-image: url('../images/next.png');
+  background-image: url('../images/previous.png');
   width: 35px;
   height: 404px;
   float: left;
 }
 #player div #player-yt {
-  width: 645px;
+  width: 945px;
   float: left;
   height: 30em;
   margin: 0;
