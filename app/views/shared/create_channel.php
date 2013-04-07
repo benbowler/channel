@@ -25,6 +25,7 @@
 					}
 				}
 			}
+			var_dump($categorys);
 			arsort($categorys);
 			$categorys = array_slice($categorys, 0, 10);
 			?>

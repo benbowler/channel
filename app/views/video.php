@@ -142,7 +142,7 @@
 		<section id="login">
 			<div>
 
-				<h1>Channel<sup>Beta</sup></h1>
+				<h1>Channel<em>Beta</em></h1>
 
 				<a href="#" class="fb-login">Login with <span>facebook</span></a>
 				<!--

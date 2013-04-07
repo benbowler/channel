@@ -430,19 +430,20 @@ a:visited {
   text-transform: uppercase;
   font-size: 3.5em;
   font-weight: bold;
-  line-height: 2em;
+  line-height: 1.8em;
   position: relative;
   left: 0.3em;
+  letter-spacing: -2px;
 }
 #login h1 em {
-  font-size: 0.3em;
+  font-size: 0.4em;
   font-weight: 100;
   color: #491645;
   position: relative;
-  bottom: 3em;
+  bottom: 1.5em;
 }
 #login a.fb-login {
-  padding: 10px;
+  padding: 10px 20px;
   background-color: #491645;
   color: white;
   -webkit-border-radius: 4px;
