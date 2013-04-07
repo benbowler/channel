@@ -144,19 +144,10 @@
 
 				<h1>Channel<em>Beta</em></h1>
 
-				<a href="#" class="fb-login">Login with <span>facebook</span></a>
-				<!--
-				<div class="hidden-phone" id="fb-facepile-wrapper">
-					<div id="fb-root"></div>
-					<script>(function(d, s, id) {
-					  var js, fjs = d.getElementsByTagName(s)[0];
-					  if (d.getElementById(id)) return;
-					  js = d.createElement(s); js.id = id;
-					  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=603643742984470";
-					  fjs.parentNode.insertBefore(js, fjs);
-					}(document, 'script', 'facebook-jssdk'));</script>
-				</div>
-				-->
+				<a href="#" class="fb-login btn">Login with <span>facebook</span></a>
+				<br />
+				
+				<a href="https://twitter.com/search?q=%23SeamlessViewing" class="seamlessviewing" target="_blank">#SeamlessViewing</a>
 
 			</div>
 		</section>

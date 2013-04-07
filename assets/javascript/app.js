@@ -70,11 +70,14 @@ function app()
 
         console.log(tag);
         $('#categorys').fadeOut();
+        $('.categorys-title').fadeOut();
+        $('.tags-title').fadeIn();
+        $('.next').fadeIn();
         $(tag).fadeIn();
     });
 
 
-    $(".tags .next").click(function (e) {
+    $(".next").click(function (e) {
         e.preventDefault();
         //var tag = '.' + $(this).data("tag");
         var titles = new Array();

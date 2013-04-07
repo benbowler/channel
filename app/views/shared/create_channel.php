@@ -1,62 +1,62 @@
 <section id="create_channel">
-	<div>
-		<h1>Create your first channel</h1>
-		<?php // var_dump($user['likes']);
+	<?php // var_dump($user['likes']);
 
-			$categorys = array();
+	$categorys = array();
 
-			foreach ($user['likes'] as $likes) {
-				foreach ($likes as $like) {
-					if($like['category'] != 'Other') {
+	foreach ($user['likes'] as $likes) {
+		foreach ($likes as $like) {
+			if($like['category'] != 'Other' && $like['category'] != 'h') {
 
-						if(array_key_exists($like['category'], $categorys)) {
-							$categorys[$like['category']]['count'] = $categorys[$like['category']]['count']+1;
+				if(array_key_exists($like['category'], $categorys)) {
+					$categorys[$like['category']]['count'] = $categorys[$like['category']]['count']+1;
 
-							//$tags[$like['category']]['tags'] = $like['name'];
-							array_push($categorys[$like['category']]['tags'], $like['name']);
-						} else {
-							$categorys[$like['category']]['count'] = 1;
-							$categorys[$like['category']]['name'] = $like['category'];
-							$categorys[$like['category']]['class'] = str_replace('/', '-', $like['category']);
+					//$tags[$like['category']]['tags'] = $like['name'];
+					array_push($categorys[$like['category']]['tags'], $like['name']);
+				} else {
+					$categorys[$like['category']]['count'] = 1;
+					$categorys[$like['category']]['name'] = $like['category'];
+					$categorys[$like['category']]['class'] = str_replace('/', '-', $like['category']);
 
-							//$tags[$like['category']]['tags'] = array(0 => $like['name']);
-							$categorys[$like['category']]['tags'] = array(0 => $like['name']);
-						}
-					}
+					//$tags[$like['category']]['tags'] = array(0 => $like['name']);
+					$categorys[$like['category']]['tags'] = array(0 => $like['name']);
 				}
 			}
-			var_dump($categorys);
-			arsort($categorys);
-			$categorys = array_slice($categorys, 0, 10);
-			?>
-			<ul id="categorys">
+		}
+	}
+	//var_dump($categorys);
+	arsort($categorys);
+	$categorys = array_slice($categorys, 0, 10);
+	?>
 
-			<?php foreach ($categorys as $category): ?>
+	<h3 class="categorys-title">To build your first channel, Start by selecting a category below</h3>
+	<ul id="categorys">
 
-				<li><a class="tag" data-tag="<?php echo $category['class']; ?>"><?php echo $category['name']; ?></a>
-					<em><?php echo $category['count']; ?></em>
-				</li>
-			
-			<?php endforeach; ?>
+	<?php foreach ($categorys as $category): ?>
 
-			</ul>
+		<li><a class="tag" data-tag="<?php echo $category['class']; ?>"><?php echo $category['name']; ?></a>
+			<em><?php echo $category['count']; ?></em>
+		</li>
+	
+	<?php endforeach; ?>
 
-
-			<?php foreach ($categorys as $category): ?>
-			<ul class="tags <?php echo $category['class']; ?>">
-
-				<?php foreach ($category['tags'] as $tag): ?>
-			
-					<li class="checkbox"><label><input type="checkbox" name="<?php echo $tag; ?>" /><?php echo $tag; ?></label></li>
-
-				<?php endforeach; ?>
-
-				<a class="next">Next</a>
-			</ul>
-			
-
-			<?php endforeach; ?>
+	</ul>
 
 
-	</div>
+	<h3 class="tags-title">What tags would you like to add to your channel?</h3>
+	<?php foreach ($categorys as $category): ?>
+
+	<ul class="tags <?php echo $category['class']; ?>">
+
+		<?php foreach ($category['tags'] as $tag): ?>
+	
+			<li class="checkbox"><label><input type="checkbox" name="<?php echo $tag; ?>" /><?php echo $tag; ?></label></li>
+
+		<?php endforeach; ?>
+
+	</ul>
+	
+	<?php endforeach; ?>
+
+	<a class="next btn">Next</a>
+
 </section>

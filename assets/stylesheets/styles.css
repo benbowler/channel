@@ -403,11 +403,11 @@ a,
 a:link,
 a:hover,
 a:visited {
-  color: #333;
+  cursor: pointer;
+  color: white;
 }
-#wrapper {
-  width: 1024px;
-  margin: 0.6em auto;
+a:hover {
+  text-decoration: none;
 }
 #login {
   position: fixed;
@@ -442,7 +442,18 @@ a:visited {
   position: relative;
   bottom: 1.5em;
 }
-#login a.fb-login {
+#login > a {
+  display: block;
+}
+#login a.seamlessviewing {
+  color: #b90aae;
+  position: fixed;
+  display: block;
+  width: 100%;
+  text-align: center;
+  bottom: 2em;
+}
+.btn {
   padding: 10px 20px;
   background-color: #491645;
   color: white;
@@ -458,6 +469,7 @@ a:visited {
   bottom: 0;
   left: 0;
   text-align: center;
+  overflow: scroll;
   background-color: #2C152A;
   /* Gradient */
   background-image: -ms-linear-gradient(top right, #2c152a 0%, #151515 100%);
@@ -468,25 +480,56 @@ a:visited {
   background-image: linear-gradient(to bottom left, #2c152a 0%, #151515 100%);
 }
 #create_channel ul#categorys {
+  width: 600%;
   display: block;
-  width: 100%;
+  padding-top: 4em;
+  overflow: scroll hidden;
 }
 #create_channel ul#categorys li {
-  width: 100px;
-  height: 100px;
   margin: 20px;
-  background-color: grey;
+  background-color: #491645;
   float: left;
+  text-transform: uppercase;
+  font-size: 3.8em;
+  letter-spacing: -2px;
+  font-weight: bold;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 #create_channel ul#categorys li a {
-  width: 100%
-				height: 100%;
+  display: block;
+  padding: 80px 100px;
 }
 #create_channel ul#categorys li em {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   float: right;
+  padding: 0.5em;
+  background-color: #5c2e58;
+  font-size: 0.3em;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+#create_channel .tags-title,
+#create_channel .categorys-title {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-top: 2em;
+  font-weight: 200;
+}
+#create_channel .tags-title,
+#create_channel .next {
+  display: none;
 }
 #create_channel .tags {
   display: none;
+  height: 500px;
 }
 #create_channel .tags li {
   width: 140px;
