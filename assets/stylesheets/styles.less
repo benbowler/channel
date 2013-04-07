@@ -5,7 +5,7 @@
 
 // Fonts
 
-@import url('http://fonts.googleapis.com/css?family=Roboto:400,700,500');
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,300,500,700');
 
 @import url('../icomoon/style.css');
 @import url('../bootstrap-switch/static/stylesheets/bootstrapSwitch.css');
@@ -20,7 +20,6 @@
 }
 
 body {
-	// font-family: 'Droid Sans', Helvetica, sans-serif;
 	font-family: 'Roboto', Helvetica, sans-serif;
 	font-size: 100%;
 
@@ -59,8 +58,6 @@ strong {
 a, a:link, a:hover, a:visited {
 	cursor: pointer;
 	color: white;
-}
-a:hover {
 	text-decoration: none;
 }
 
@@ -105,7 +102,7 @@ a:hover {
 		letter-spacing: -2px;
 		em {
 			font-size: 0.4em;
-			font-weight: 100;
+			font-weight: 300;
 			color: #491645;
 
 			position: relative;
@@ -215,20 +212,33 @@ a:hover {
 
 		padding-top: 2em;
 
-		font-weight: 200;
+		font-weight: 400;
 	}
 	.tags-title, .next {
 		display: none;
 	}
 	.tags {
-			margin: 20px;
+		display: none;
+
+		padding-top: 4em;
+
+		overflow-x: hidden;
+		overflow-y: scroll;
+
+		height: 400px;
+		width: auto;
+		li {
+			width: 5000%;
+
+			margin: 5px;
 			background-color: #491645;
 
 			float: left;
 
-			text-transform: uppercase;
-			font-size: 3.8em;
+			font-size: 1.6em;
 			letter-spacing: -2px;
+
+			text-transform: uppercase;
 
 			font-weight: bold;
 
@@ -237,26 +247,38 @@ a:hover {
 			-webkit-border-radius: 4px;
 			-moz-border-radius: 4px;
 			border-radius: 4px;
+
+
 			label {
 				display: block;
 				padding: 20px 30px;
+
+				letter-spacing: 0px;
+
+				input {
+					display: none;
+				}
+				em {
+					display: block;
+
+					padding: 0.5em;
+					color: #adadad;
+
+					font-size: 0.8em;
+					font-weight: 300;
+
+					-webkit-border-bottom-right-radius: 4px;
+					-moz-border-bottom-right-radius: 4px;
+					border-bottom-right-radius: 4px;
+				}
 			}
-			em {
-				position: absolute;
-				bottom: 0;
+			.next-wrapper {
+				position: fixed;
 				right: 0;
-				float: right;
-
-				padding: 0.5em;
-
-				background-color: #5c2e58;
-
-				font-size: 0.3em;
-
-				-webkit-border-bottom-right-radius: 4px;
-				-moz-border-bottom-right-radius: 4px;
-				border-bottom-right-radius: 4px;
+				bottom: 0;
+				left: 0;
 			}
+		}
 	}
 }
 

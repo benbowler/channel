@@ -56,7 +56,7 @@ function app()
 
 
 
-    /*   chanl functions
+    /*   Chanl functions
     */
 
     function createChannel() {

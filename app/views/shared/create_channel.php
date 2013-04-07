@@ -56,7 +56,7 @@
 	</ul>
 	
 	<?php endforeach; ?>
-
-	<a class="next btn">Next</a>
-
+	<span class="next-wrapper">
+		<a class="next btn">Next</a>
+	</span>
 </section>
