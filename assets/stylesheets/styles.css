@@ -416,7 +416,7 @@ a:visited {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 12em 0;
+  padding: 20% 0;
   text-align: center;
   background-color: #2C152A;
   /* Gradient */
@@ -483,7 +483,7 @@ a:visited {
 #create_channel ul#categorys {
   width: 1000%;
   display: block;
-  padding-top: 12em;
+  padding-top: 20%;
   overflow: scroll hidden;
 }
 #create_channel ul#categorys li {
@@ -537,7 +537,7 @@ a:visited {
 }
 #create_channel .tags {
   display: none;
-  padding-top: 12em;
+  padding-top: 20%;
   overflow-x: scroll;
   overflow-y: hidden;
   height: 400px;
